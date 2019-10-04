@@ -1,0 +1,40 @@
+{
+  "name": "api-demo",
+  "version": "1.0.0",
+  "description": "REST API demo using NodeJS, Typescript, Express and MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/src/index.js",
+    "start-dev": "tsc-watch --preserveWatchOutput --onSuccess \"node dist/src/index.js\"",
+    "build": "tsc",
+    "test": "ts-mocha test/**/*.spec.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pablodicosta/api-demo.git"
+  },
+  "author": "pablodicosta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pablodicosta/api-demo/issues"
+  },
+  "homepage": "https://github.com/pablodicosta/api-demo#readme",
+  "devDependencies": {
+    "@types/chai": "^4.2.3",
+    "@types/express": "^4.17.1",
+    "@types/mocha": "^5.2.7",
+    "chai": "^4.2.0",
+    "mocha": "^6.2.1",
+    "request": "^2.88.0",
+    "sinon": "^7.5.0",
+    "ts-mocha": "^6.0.0",
+    "tsc-watch": "^4.0.0",
+    "typescript": "^3.6.3"
+  },
+  "dependencies": {
+    "class-transformer": "^0.2.3",
+    "class-validator": "^0.10.1",
+    "express": "^4.17.1",
+    "routing-controllers": "^0.8.0"
+  }
+}
