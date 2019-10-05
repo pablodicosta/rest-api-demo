@@ -1,3 +1,4 @@
+apiToken: API_TOKEN
 database:
   host: DB_HOST
   port: DB_PORT

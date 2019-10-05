@@ -4,15 +4,18 @@ import { controllers } from './controllers';
 import { Container } from 'typedi';
 import { DatabaseUtil } from './util/database.util';
 import config from 'config';
+import { AuthUtil } from './util/auth.util';
 
-const dbConfig: any = config.get('database');
+process.env.NODE_CONFIG_DIR = './backend/config';
 
 useContainer(Container);
 
+const dbConfig: any = config.get('database');
 const port = 3000;
 const app = createExpressServer({
   controllers,
-  routePrefix: '/api'
+  routePrefix: '/api',
+  authorizationChecker: AuthUtil.checkToken
 });
 
 app.listen(port, async () => {

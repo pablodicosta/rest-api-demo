@@ -1,11 +1,12 @@
 import { Post, Body, JsonController, InternalServerError,
-        HttpError, Res, Req, HttpCode } from 'routing-controllers';
+        HttpError, Res, Req, HttpCode, Authorized } from 'routing-controllers';
 import { User } from '../model/user.model';
 import { UserService } from '../services/user.service';
 import { DuplicatedError } from '../errors/duplicated.error';
 import * as HttpStatus from 'http-status-codes';
 import { Response, Request } from 'express';
 
+@Authorized()
 @JsonController('/user')
 export class UserController {
 
