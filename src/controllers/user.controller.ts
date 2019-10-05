@@ -1,6 +1,6 @@
-import { Post, Body, JsonController } from "routing-controllers";
-import { User } from "../model/user.model";
-import { UserService } from "../services/user.service";
+import { Post, Body, JsonController } from 'routing-controllers';
+import { User } from '../model/user.model';
+import { UserService } from '../services/user.service';
 
 @JsonController('/user')
 export class UserController {

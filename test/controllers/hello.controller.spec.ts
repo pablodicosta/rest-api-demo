@@ -4,8 +4,8 @@ import 'mocha';
 
 describe('HelloController', () => {
   it('should return message on GET', () => {
-    const helloController = new HelloController();    
+    const helloController = new HelloController();
     const res = helloController.getHelloMessage();
-    expect(res).to.be.eq('Hello!');
+    expect(res).to.be.equal('Hello!');
   });
 });

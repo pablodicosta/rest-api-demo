@@ -1,4 +1,4 @@
-import { IsString, IsUrl } from "class-validator";
+import { IsString, IsUrl } from 'class-validator';
 
 export class User {
 
@@ -9,4 +9,5 @@ export class User {
 
   @IsUrl()
   avatar: string;
+
 }
