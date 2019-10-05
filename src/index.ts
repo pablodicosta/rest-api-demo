@@ -1,6 +1,9 @@
 import "reflect-metadata";
-import { createExpressServer } from "routing-controllers";
+import { createExpressServer, useContainer } from "routing-controllers";
 import { controllers } from './controllers';
+import { Container } from 'typedi';
+
+useContainer(Container);
 
 const port = 3000;
 const app = createExpressServer({ controllers });
