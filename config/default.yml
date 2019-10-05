@@ -1,0 +1,10 @@
+# ONLY FOR LOCAL DEVELOPMENT. DO NOT COMMIT REAL CREDENTIALS HERE.
+# INSTEAD, USE ENVIRONMENT VARIABLES DEFINED IN custom-environment-variables.json
+
+database:
+  host: localhost
+  port: 27017
+  username: root
+  password: root
+  database: api-demo
+  
