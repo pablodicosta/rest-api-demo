@@ -1,6 +1,7 @@
 # ONLY FOR LOCAL DEVELOPMENT. DO NOT COMMIT REAL CREDENTIALS HERE.
 # INSTEAD, USE ENVIRONMENT VARIABLES DEFINED IN custom-environment-variables.json
 apiToken: asdfg12345
+appPort: 3000
 database:
   host: localhost
   port: 27017

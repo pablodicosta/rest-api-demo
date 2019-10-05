@@ -1,6 +1,6 @@
 import { JsonController, Get, QueryParam, Post, Body,
         Put, Param, Delete, InternalServerError,
-        Req, Res, HttpError, HttpCode, NotFoundError, Authorized } from 'routing-controllers';
+        Req, Res, HttpError, HttpCode, NotFoundError, Authorized, BadRequestError } from 'routing-controllers';
 import { Article } from '../model/article.model';
 import { ArticleService } from '../services/article.service';
 import { UserService } from '../services/user.service';
@@ -20,9 +20,12 @@ export class ArticleController {
   @Get()
   async getArticles(@QueryParam('tag') tags: string[]) {
     try {
+      if (!tags) {
+        throw new BadRequestError('Tags are required');
+      }
       return await this.articleService.getArticles(tags);
     } catch (err) {
-      throw new InternalServerError(err.message);
+      throw err;
     }
   }
 
